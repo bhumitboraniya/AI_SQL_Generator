@@ -4,11 +4,16 @@ import sqlite3
 import tkinter as tk
 from tkinter import messagebox
 import easygui
+from pymongo import MongoClient
 
 google_api_key = "AIzaSyByqwQqm-zdgUgek-VFsWVKasMsXL0TvN8"
 
 genai.configure(api_key=google_api_key)
 model = genai.GenerativeModel('gemini-pro')
+
+client = MongoClient("mongodb://localhost:27017/")
+db = client["SQL_Queries"]  
+collection = db["SQL_Queries"]  
 
 def main():
     st.set_page_config(page_title="SQL Query Generator")
@@ -96,9 +101,13 @@ def main():
 
             # Execute the query with confirmation
             execute_query_with_confirmation(sql_query_cleaned)
+        
+             # Store the SQL query in MongoDB
+            # query_data = {"sql_query": sql_query_cleaned}
+            query_data = {"user_input": text_input, "sql_query": sql_query_cleaned}
+            collection.insert_one(query_data)
                     
-                    
-                    # conn = sqlite3.connect('new_database.db')
+                    # conn = sqlite3.connect('new_da    tabase.db')
                     # cursor = conn.cursor()
                     # cursor.execute(sql_query_cleaned)
                     # conn.commit()
