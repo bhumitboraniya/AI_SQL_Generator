@@ -1,4 +1,4 @@
-# SQL Query Generator
+# AI SQL Generator
 
 ## Overview
 The SQL Query Generator is a simple tool built with Streamlit and GenerativeAI that allows users to generate SQL queries from English sentences. It utilizes the power of natural language processing to understand user input and generate relevant SQL queries.
