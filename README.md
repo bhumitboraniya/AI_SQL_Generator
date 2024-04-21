@@ -16,13 +16,12 @@ Before running the application, ensure you have the following installed:
 - Google GenerativeAI library
 - SQLite3
 
-## Installation
-1. Clone this repository:
-2. Install dependencies:
-3. pip install -q -U google-generativeai
-4. pip install streamlit
-5. pip install tk
-6. pip install easygui
+## Installation 
+1. pip install -q -U google-generativeai
+2. pip install streamlit
+3. pip install tk
+4. pip install easygui
+5. pip install pymongo
 
 
 ## Usage
