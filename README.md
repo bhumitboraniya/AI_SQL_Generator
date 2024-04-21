@@ -19,10 +19,10 @@ Before running the application, ensure you have the following installed:
 ## Installation
 1. Clone this repository:
 2. Install dependencies:
-pip install -q -U google-generativeai
-pip install streamlit
-pip install tk 
-pip install easygui
+3. pip install -q -U google-generativeai
+4. pip install streamlit
+5. pip install tk
+6. pip install easygui
 
 
 ## Usage
